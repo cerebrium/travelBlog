@@ -20,9 +20,9 @@ db.on('error', (err) => {
 })
 
 // mount all of my routes at their prefixes
-app.use('/auth', require('./routes/auth'))
+app.use('/api/auth', require('./routes/auth'))
 
 // get the server listening on its port
 app.listen(process.env.PORT, () => {
-    console.log('server is running')
+    console.log(`server is running on port ${process.env.PORT}`)
 })

@@ -1,22 +1,36 @@
-import React from "react"
+import React, { useState, useEffect} from "react"
 import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
 import { Link } from "gatsby"
 import '../components/layout.css'
 import axios from 'axios'
 
+
+
 const Home = ({ user }) => {
   return <p>Hi, {user.name ? user.name : "friend"}!</p>
 }
+
 const Settings = () => <p>Settings</p>
 const Billing = () => <p>Billing</p>
 
 const Account = () => {
+  const user = getProfile()
+  console.log(user)
+  useEffect(() => {
+    axios.post('/api/auth/signup', {
+      name: user.name, 
+      email: user.email 
+    }).then( response => {
+      console.log(response)
+    })
+  }, [])
   if (!isAuthenticated()) {
     login()
     return <p>Redirecting to login...</p>
   }
+  
 
-  const user = getProfile()
+
 
   return (
     <div>
