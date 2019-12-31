@@ -615,6 +615,68 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+/******************* My Styles *************************************/
+
+/******************** Login Page ***********************************/
+
+.loginPage{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('loginBackground.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10%;
+}
+
+.myLinks {
+  font-size: 2em;
+  margin: 0.67em 0;
+  text-decoration: none;
+  color: #000;
+  opacity: .8;
+}
+
+.myLinks:hover {
+  color: rgb(165, 70, 70);
+  font-size: 2.2em;
+}
+
+/******************** Nav Bar ***********************************/
+.navBar {
+  z-index: 1;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed; /* Make it stick, even on scroll */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 7%;
+  background-color: grey;
+}
+
+/******************************** account page *****************************/
+.mainDiv {
+  min-height: 100vh;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('mainBackground.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
