@@ -1,25 +1,38 @@
-// src/pages/account.js
 import React from "react"
-import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
+import { useStaticQuery, graphql } from "gatsby"
+import PropTypes from 'prop-types'
+import { login, logout, isAuthenticated} from "../utils/auth"
 import { Link } from "gatsby"
-import axios from 'axios'
-
-const Home = ({ user }) => {
-  return <p>Hi, {user.name ? user.name : "friend"}!</p>
-}
-const Settings = () => <p>Settings</p>
-const Billing = () => <p>Billing</p>
+import Img from 'gatsby-image'
 
 const Places = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    secondFileName: file(relativePath: { eq: "leavenworth.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500, maxHeight: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    fileName: file(relativePath: { eq: "ginishkaDragon.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500, maxHeight: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  
+  }
+  `)
+
   if (!isAuthenticated()) {
     login()
     return <p>Redirecting to login...</p>
   }
 
-  const user = getProfile()
-
   return (
-    <div>
+    <>
       <nav className="navBar">
         <Link to="/account" className='myLinks'>Home</Link>{' | '}
         <Link to="/foods/" className='myLinks'>Foods</Link>{' | '}
@@ -32,11 +45,20 @@ const Places = () => {
           Log Out
         </a>
       </nav>
-      <div className='mainDiv'>
-        <h1>Travel Foodie Express</h1>
-        <h3>places page</h3>
+      <div className='mainDivTwo'>
+        <h1 className='placesTitle'>Places</h1>
+        <div className='placesImages'>
+          <div className='imageStyler aligner'>
+            <h2 className='asiaTag'>Asia</h2>
+            <Link to='/asia/'><Img fluid={data.fileName.childImageSharp.fluid} alt="../images/ginishkaDragon.png"/></Link>
+          </div>
+          <div className='imageStyler aligner'>
+            <h2 className='asiaTag'>Leavenworth</h2>
+            <Link to='/leavenworth/'><Img fluid={data.secondFileName.childImageSharp.fluid} alt="../images/leavenworth.png"/></Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

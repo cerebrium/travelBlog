@@ -3,22 +3,15 @@ import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
 import { Link } from "gatsby"
 import axios from 'axios'
 
-const Home = ({ user }) => {
-  return <p>Hi, {user.name ? user.name : "friend"}!</p>
-}
-const Settings = () => <p>Settings</p>
-const Billing = () => <p>Billing</p>
-
 const Foods = () => {
   if (!isAuthenticated()) {
     login()
     return <p>Redirecting to login...</p>
   }
 
-  const user = getProfile()
-
   return (
     <div>
+      {/* nav bar */}
       <nav className="navBar">
         <Link to="/account/" className='myLinks'>Home</Link>{' | '}
         <Link to="/foods/" className='myLinks'>Foods</Link>{' | '}
@@ -31,6 +24,8 @@ const Foods = () => {
           Log Out
         </a>
       </nav>
+
+      {/* main content */}
       <div className='mainDiv'>
         <h1>Travel Foodie Express</h1>
         <h3>foods page</h3>

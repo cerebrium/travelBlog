@@ -5,6 +5,6 @@ import '../components/layout.css'
 export default () => (
   <div className='loginPage'>
     
-    <Link to="/account" className='myLinks'><h1>Welcome to Tavel Foodie Express!</h1></Link>
+    <Link to="/account" className='myLinks'><h1>Welcome to Travel Foodie Express!</h1></Link>
   </div>
 )

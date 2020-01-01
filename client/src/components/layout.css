@@ -642,6 +642,7 @@ pre tt:after {
 .myLinks:hover {
   color: rgb(165, 70, 70);
   font-size: 2.2em;
+  opacity: 2;
 }
 
 /******************** Nav Bar ***********************************/
@@ -656,7 +657,7 @@ pre tt:after {
   margin: 0;
   padding: 0;
   height: 7%;
-  background-color: grey;
+  opacity: .8;
 }
 
 /******************************** account page *****************************/
@@ -670,10 +671,34 @@ pre tt:after {
   background-size: cover;
 }
 
+/************************************** places page *********************************/
+.mainDivTwo {
+  min-height: 100vh;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background: url('mainBackground.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
 
+.placesTitle{
+  text-align: center;
+}
 
+.placesImages {
+  display: flex;
+  flex-direction: column;
+}
 
+.asiaTag{
+  text-align: center;
+}
 
+.imageStyler {
+  width: 70vh;
+  margin: 2%;
+}
 
 
 
