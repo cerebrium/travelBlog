@@ -12,12 +12,11 @@ const commentSchema = new mongoose.Schema({
 })
 
 const imageCommentSchema = new mongoose.Schema({
-    imageName: {
+    pageName: {
         type: String,
         require: true
     },
     comments: [commentSchema],
-
 })
 
 module.exports = mongoose.model('Comment', imageCommentSchema)

@@ -700,6 +700,51 @@ pre tt:after {
   margin: 2%;
 }
 
+/************************************** asia page *********************************/
+
+.addPhoto {
+  color: #000;
+  opacity: 0;
+}
+
+.myTextClass {
+  text-align: justify;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.commentsBox {
+  background: rgb(192, 191, 191);
+  width: 90vw;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.names{
+  color: black;
+}
+
+textarea{
+  margin-left: 5%;
+}
+
+.myForm{
+  text-align: center;
+}
+
+.submitButton{
+  margin-left: 6%;
+}
+
+.commentTitle{
+  text-align: center;
+}
+
+.comments{
+  padding-left: 2%;
+}
+
+
 
 
 @media only screen and (max-width: 480px) {
