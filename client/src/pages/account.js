@@ -22,9 +22,6 @@ const Account = () => {
     return <p>Redirecting to login...</p>
   }
   
-
-
-
   return (
     <Layout>
       <SEO title="Home" />
