@@ -8,7 +8,7 @@ const app = express();
 // middleware
 app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
-app.use(express.static(__dirname + '/client/build'));
+app.use(express.static(__dirname + '/client/public/static'));
 
 // starting up mongo
 mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
