@@ -8,7 +8,7 @@ const app = express();
 // middleware
 app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
-app.use(express.static(__dirname + '/client/public/static'));
+// app.use(express.static(__dirname + '/client/public/static'));
 
 // starting up mongo
 mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
@@ -23,9 +23,10 @@ db.on('error', (err) => {
 // mount all of my routes at their prefixes
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/comment', require('./routes/comment'))
-app.get('*', function(req, res) {
-	res.sendFile(__dirname + '/client/public/static/index.html');
-});
+app.get('*', function (req, res) {
+    const index = path.join(__dirname, 'build', 'index.html');
+    res.sendFile(index);
+  });
 
 // get the server listening on its port
 app.listen(process.env.PORT, () => {
