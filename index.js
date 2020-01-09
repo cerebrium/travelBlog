@@ -24,7 +24,7 @@ db.on('error', (err) => {
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/comment', require('./routes/comment'))
 app.get('*', function(req, res) {
-	res.sendFile(__dirname + '/client/build/index.html');
+	res.sendFile(__dirname + '/client/public/static/index.html');
 });
 
 // get the server listening on its port
