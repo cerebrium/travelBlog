@@ -8,7 +8,7 @@ const app = express();
 // middleware
 app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
-// app.use(express.static(__dirname + '/client/public/static'));
+// app.use(express.static(__dirname + '/client/src'));
 
 // starting up mongo
 mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
@@ -24,7 +24,7 @@ db.on('error', (err) => {
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/comment', require('./routes/comment'))
 app.get('*', function(req, res) {
-	res.sendFile(__dirname + '/client/src/pages/index.js');
+	res.sendFile(__dirname + '/client/public/index.js');
 });
 
 // get the server listening on its port
