@@ -23,10 +23,9 @@ db.on('error', (err) => {
 // mount all of my routes at their prefixes
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/comment', require('./routes/comment'))
-// app.get('*', function (req, res) {
-//     const index = path.join(__dirname, 'build', 'index.html');
-//     res.sendFile(index);
-//   });
+app.get('*', function(req, res) {
+	res.sendFile(__dirname + '/client/src/pages/index.js');
+});
 
 // get the server listening on its port
 app.listen(process.env.PORT, () => {
