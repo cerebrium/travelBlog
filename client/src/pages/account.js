@@ -10,7 +10,7 @@ import Img from 'gatsby-image'
 const Account = () => {
   const data = useStaticQuery(graphql`
   query {
-    secondFileName: file(relativePath: { eq: "selfie.jpg" }) {
+    fileName: file(relativePath: { eq: "selfie.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500, maxHeight: 300) {
           ...GatsbyImageSharpFluid
@@ -21,13 +21,11 @@ const Account = () => {
   `)
 
   const user = getProfile()
-  console.log(user)
   useEffect(() => {
     axios.post('/api/auth/signup', {
       name: user.name, 
       email: user.email 
     }).then( response => {
-      console.log(response)
     })
   }, [])
   if (!isAuthenticated()) {
@@ -53,7 +51,7 @@ const Account = () => {
         </nav>
         <div className='mainDiv'>
           <h1>Welcome to my blog!</h1><br />
-          <Img fluid={data.secondFileName.childImageSharp.fluid} alt="../images/leavenworth.png" className='firstImage'/>
+          <Img fluid={data.fileName.childImageSharp.fluid} alt="../images/selfie.png" className='firstImage'/>
         </div>
       </div>
     </Layout>

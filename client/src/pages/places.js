@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import PropTypes from 'prop-types'
 import { login, logout, isAuthenticated} from "../utils/auth"
 import Img from 'gatsby-image'
 import '../components/layout.css'

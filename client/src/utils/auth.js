@@ -36,7 +36,6 @@ export const login = () => {
   if (! (typeof window !== "undefined")) {
     return
   }
-  console.log(auth)
   auth.authorize()
 }
 

@@ -15,6 +15,13 @@ const Foods = () => {
         }
       }
     }
+    fileName: file(relativePath: { eq: "beachBeer.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 500, maxHeight: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
     `)
   if (!isAuthenticated()) {
@@ -43,11 +50,19 @@ const Foods = () => {
       <div className='mainDiv'>
         <h1>Foods</h1><br />
         <div className='foodContent'>
-          <h3>
-            When we were in Malaysia we went to the local beer market and got beer 
-            that was made that day. This was one of the beers, and it was delicious
-          </h3>
-          <Img fluid={data.scondFileName.childImageSharp.fluid} alt="../images/malaysiaBeer.png"/>
+          <div className='imageStyler aligner'>
+            <h3>
+              When we were in Malaysia we went to the local beer market and got beer 
+              that was made that day. This was one of the beers, and it was delicious
+            </h3>
+            <Img fluid={data.secondFileName.childImageSharp.fluid} alt="../images/malaysiaBeer.png"/>
+          </div>
+          <div className='imageStyler aligner'>
+            <h3>
+              Along with the beer in Malaysia, In Bali we also had beach bear with espresso!
+            </h3>
+            <Img fluid={data.fileName.childImageSharp.fluid} alt="../images/beachBeer.jpg" />
+          </div>
         </div>
       </div>
     </div>

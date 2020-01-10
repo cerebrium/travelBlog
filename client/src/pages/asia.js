@@ -11,14 +11,11 @@ const Asia = () => {
 
   useEffect(() => {
     axios.post('/api/comment/currcomments', {name: 'asia'}).then( response => {
-      console.log(response.data)
       if (comments.length > 1) {
-        console.log('in the if comments block')
         var myComments = [...comments]
         myComments.push(response.data)
         setComments(myComments)
       } else {
-        console.log('in the else comments block', response.data)
         setComments(response.data)
       }
     })
@@ -45,16 +42,13 @@ const Asia = () => {
       userName: user.given_name
     }).then(response => {
       if (comments.length > 1) {
-        console.log('in the if comments block')
         var myComments = [...comments]
         myComments.push(response.data)
         setComments(myComments)
       } else {
-        console.log('in the else comments block')
         setComments(response.data)
       }
     })
-    console.log(event.target.message.value)
     event.target.message.value = ''
   }
 
