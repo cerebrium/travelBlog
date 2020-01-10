@@ -2,7 +2,7 @@ import auth0 from "auth0-js"
 import { navigate } from "gatsby"
 
 var auth;
-
+// cool
 if (typeof window !== "undefined") {
     auth = new auth0.WebAuth({
       domain: process.env.GATSBY_AUTH0_DOMAIN,
