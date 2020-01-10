@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
 app.use(express.static(__dirname + '/client/public'));
 
-// starting up mongo
+// starting up mongo FOR DATABASE
 mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 db.once('open', () => {
