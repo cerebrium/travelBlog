@@ -63,6 +63,7 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+
 }
 mark {
   background-color: #ff0;
@@ -744,8 +745,17 @@ textarea{
   padding-left: 2%;
 }
 
+/************************************** Foods page *********************************/
+.foodContent {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
 
-
+/************************************** Home page *********************************/
+.firstImage{
+  text-align: center;
+}
 
 @media only screen and (max-width: 480px) {
   html {

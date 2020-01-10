@@ -2,11 +2,24 @@ import React, { useState, useEffect} from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import '../components/layout.css'
 import axios from 'axios'
+import Img from 'gatsby-image'
 
 const Account = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    secondFileName: file(relativePath: { eq: "selfie.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500, maxHeight: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+  `)
+
   const user = getProfile()
   console.log(user)
   useEffect(() => {
@@ -39,6 +52,8 @@ const Account = () => {
           </a>
         </nav>
         <div className='mainDiv'>
+          <h1>Welcome to my blog!</h1><br />
+          <Img fluid={data.secondFileName.childImageSharp.fluid} alt="../images/leavenworth.png" className='firstImage'/>
         </div>
       </div>
     </Layout>

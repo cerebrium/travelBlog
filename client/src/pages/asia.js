@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
 import { Link } from "gatsby"
 import axios from 'axios'
+import '../components/layout.css'
+
 
 const Asia = () => {
   const [currUser, setCurrUser] = useState(null);

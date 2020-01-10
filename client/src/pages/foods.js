@@ -3,11 +3,12 @@ import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import axios from 'axios'
 import Img from 'gatsby-image'
+import '../components/layout.css'
 
 const Foods = () => {
   const data = useStaticQuery(graphql`
   query {
-    fileName: file(relativePath: { eq: "malaysiaBeer.png" }) {
+    secondFileName: file(relativePath: { eq: "malaysiaBeer.png" }) {
       childImageSharp {
         fluid(maxWidth: 500, maxHeight: 300) {
           ...GatsbyImageSharpFluid
@@ -40,8 +41,14 @@ const Foods = () => {
 
       {/* main content */}
       <div className='mainDiv'>
-        <h3>When we were in Malaysia we went to the local beer market and got beer that was made that day. This was one of the beers, and it was delicious</h3>
-        <Img fluid={data.fileName.childImageSharp.fluid} alt="../images/malaysiaBeer.png"/>
+        <h1>Foods</h1><br />
+        <div className='foodContent'>
+          <h3>
+            When we were in Malaysia we went to the local beer market and got beer 
+            that was made that day. This was one of the beers, and it was delicious
+          </h3>
+          <Img fluid={data.scondFileName.childImageSharp.fluid} alt="../images/malaysiaBeer.png"/>
+        </div>
       </div>
     </div>
   )
