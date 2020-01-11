@@ -51,7 +51,9 @@ const Account = () => {
         </nav>
         <div className='mainDiv'>
           <h1>Welcome To My Blog!</h1><br />
-          <Img fluid={data.fileName.childImageSharp.fluid} alt="../images/selfie.jpg"/>
+          <div className='imageStylerTwo aligner'>
+            <Img fluid={data.fileName.childImageSharp.fluid} alt="../images/selfie.jpg"/>
+          </div>
         </div>
       </div>
     </Layout>
