@@ -60,10 +60,6 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
 mark {
   background-color: #ff0;
   color: #000;
@@ -667,9 +663,10 @@ pre tt:after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url('oceanWaves.jpg') no-repeat center center fixed;
+  background: url('finalBackground.jpg') no-repeat center center fixed;
   background-size: cover;
   position: relative;
+  text-align: justify;
 }
 
 .makeMeOpace{
@@ -683,7 +680,7 @@ pre tt:after {
   display: flex;
   flex-direction: column;
   align-items: left;
-  background: url('oceanWaves.jpg') no-repeat center center fixed;
+  background: url('finalBackground.jpg') no-repeat center center fixed;
   background-size: cover;
   position: relative;
 }
@@ -781,4 +778,39 @@ textarea{
   html {
     font-size: 80%;
   }
+
+  h1 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5%;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 1.45rem;
+    color: inherit;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+    font-size: 2.25rem;
+    line-height: 1.1;
+  }
+
+  .imageStylerTwo {
+    width: 50vh;
+    margin: 2%;
+  }
+  
+  .imageStylerThree{
+    width: 50vh;
+    margin: 2%;
+  }
+
+  .imageStylerFour{
+    width: 50vh;
+    margin: 2%;
+    padding-bottom: 5%;
+  }
+
 }

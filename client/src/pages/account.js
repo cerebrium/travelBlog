@@ -51,8 +51,8 @@ const Account = () => {
         </nav>
         <div className='mainDiv'>
           <h1>Welcome To My Blog!</h1><br />
-          <div className='imageStylerThree aligner'>
-            <h3 className='makeMeOpace'>
+          <div className='imageStylerThree asiaTag'>
+            <h3>
               My name is nick and this is my blog about foods I like, and places I've been. If you like anything
               feel free to reach out to me in the comment sections!
             </h3>
