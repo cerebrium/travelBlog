@@ -52,7 +52,10 @@ const Account = () => {
         <div className='mainDiv'>
           <h1>Welcome To My Blog!</h1><br />
           <div className='imageStylerThree aligner'>
-            <Img fluid={data.fileName.childImageSharp.fluid} alt="../images/selfie.jpg"/>
+            <h3 className='makeMeOpace'>
+              My name is nick and this is my blog about foods I like, and places I've been. If you like anything
+              feel free to reach out to me in the comment sections!
+            </h3>
           </div>
         </div>
       </div>

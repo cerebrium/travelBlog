@@ -57,7 +57,7 @@ const Foods = () => {
             </h3>
             <Img fluid={data.secondFileName.childImageSharp.fluid} alt="../images/malaysiaBeer.png"/>
           </div>
-          <div className='imageStylerTwo aligner'>
+          <div className='imageStylerFour aligner'>
             <h3>
               After Malaysia we went to Indonesia. In Indonesia I went with my friends to Bali and drnak lots of
               espresso aon the beach! The coffee in most of Asia I found to be extremely sweet, so I stuck mostly

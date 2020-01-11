@@ -63,7 +63,7 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
-
+  opacity: .8;
 }
 mark {
   background-color: #ff0;
@@ -668,9 +668,13 @@ pre tt:after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url('mainBackground.jpg') no-repeat center center fixed;
+  background: url('backgroundBeachTwo.jpg') no-repeat center center fixed;
   background-size: cover;
   position: relative;
+}
+
+.makeMeOpace{
+  opacity: .8;
 }
 
 /************************************** places page *********************************/
@@ -680,7 +684,7 @@ pre tt:after {
   display: flex;
   flex-direction: column;
   align-items: left;
-  background: url('mainBackground.jpg') no-repeat center center fixed;
+  background: url('backgroundBeachTwo.jpg') no-repeat center center fixed;
   background-size: cover;
   position: relative;
 }
@@ -712,6 +716,7 @@ pre tt:after {
   width: 60vh;
   margin: 2%;
 }
+
 
 /************************************** asia page *********************************/
 
@@ -763,6 +768,12 @@ textarea{
   flex-direction: column;
 }
 
+.imageStylerFour{
+  width: 90vh;
+  margin: 2%;
+  padding-bottom: 5%;
+}
+
 /************************************** Home page *********************************/
 .firstImage{
   text-align: center;
@@ -770,6 +781,6 @@ textarea{
 
 @media only screen and (max-width: 480px) {
   html {
-    font-size: 100%;
+    font-size: 80%;
   }
 }
