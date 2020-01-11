@@ -48,18 +48,21 @@ const Foods = () => {
 
       {/* main content */}
       <div className='mainDiv'>
-        <h1>Foods</h1><br />
+        <h1>Foods</h1>
         <div className='foodContent'>
-          <div className='imageStyler aligner'>
+          <div className='imageStylerTwo aligner'>
             <h3>
               When we were in Malaysia we went to the local beer market and got beer 
-              that was made that day. This was one of the beers, and it was delicious
+              that was made that day. This was one of the beers, and it was delicious. It was also
+              questionably brewed!
             </h3>
             <Img fluid={data.secondFileName.childImageSharp.fluid} alt="../images/malaysiaBeer.png"/>
           </div>
-          <div className='imageStyler aligner'>
+          <div className='imageStylerTwo aligner'>
             <h3>
-              Along with the beer in Malaysia, In Bali we also had beach bear with espresso!
+              After Malaysia we went to Indonesia. In Indonesia I went with my friends to Bali and drnak lots of
+              espresso aon the beach! The coffee in most of Asia I found to be extremely sweet, so I stuck mostly
+              to the espresso.
             </h3>
             <Img fluid={data.fileName.childImageSharp.fluid} alt="../images/beachBeer.jpg" />
           </div>

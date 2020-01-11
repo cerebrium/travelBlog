@@ -701,6 +701,11 @@ pre tt:after {
   margin: 2%;
 }
 
+.imageStylerTwo {
+  width: 90vh;
+  margin: 2%;
+}
+
 /************************************** asia page *********************************/
 
 .addPhoto {
