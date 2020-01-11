@@ -668,7 +668,7 @@ pre tt:after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url('backgroundBeachTwo.jpg') no-repeat center center fixed;
+  background: url('whiteClouds.jpg') no-repeat center center fixed;
   background-size: cover;
   position: relative;
 }
@@ -684,7 +684,7 @@ pre tt:after {
   display: flex;
   flex-direction: column;
   align-items: left;
-  background: url('backgroundBeachTwo.jpg') no-repeat center center fixed;
+  background: url('whiteClouds.jpg') no-repeat center center fixed;
   background-size: cover;
   position: relative;
 }
