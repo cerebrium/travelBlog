@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
 import { Link, useStaticQuery, graphql } from "gatsby"
+import Img from 'gatsby-image'
 import axios from 'axios'
 import '../components/layout.css'
 
@@ -11,14 +12,14 @@ const Asia = () => {
   query {
     secondFileName: file(relativePath: { eq: "espressoAndDrink.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 500, maxHeight: 500) {
+        fluid(maxWidth: 500, maxHeight: 500, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     fileName: file(relativePath: { eq: "sushi.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 500, maxHeight: 500) {
+        fluid(maxWidth: 500, maxHeight: 500, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
