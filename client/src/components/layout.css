@@ -797,6 +797,11 @@ textarea{
     line-height: 1.1;
   }
 
+  .imageStyler {
+    width: 50vh;
+    margin: 2%;
+  }
+
   .imageStylerTwo {
     width: 50vh;
     margin: 2%;
