@@ -17,7 +17,7 @@ const Foods = () => {
     }
     fileName: file(relativePath: { eq: "beachBeer.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 500, maxHeight: 300) {
+        fluid(maxWidth: 500, maxHeight: 500) {
           ...GatsbyImageSharpFluid
         }
       }
