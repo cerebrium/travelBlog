@@ -105,6 +105,7 @@ const Asia = () => {
             that were friendlier than you would think!
           </h3>
             <Img fluid={data.secondFileName.childImageSharp.fluid} alt="../images/espressoAndDrink.jpg"/>
+            <br />
           <h3>
             I absolutely fell in love with the juices they served in Bali. This one here was one of the Best. The juices came 
             from the freshest of ingredients and were always refreshing in the heat.
@@ -112,6 +113,7 @@ const Asia = () => {
         </div>
         <div className='imageStylerTwo aligner'>
           <Img fluid={data.fileName.childImageSharp.fluid} alt="../images/sushi.jpg" />
+          <br />
           <h3>
             Along with the drinks the food was absolutely amazing. My favorite was the chicken satay, but at this restuarant the 
             styling of these paticular sushi interested me.
@@ -124,7 +126,7 @@ const Asia = () => {
           <br />
         <h3>Add A Comment:</h3>
           <form onSubmit={handleSubmit} className='myForm'>
-            <textarea name="message" cols="10" rows="10"></textarea><br />
+            <textarea name="message" cols="30" rows="5"></textarea><br />
             <input type="submit" value="submit" className='submitButton'/>
           </form>
           <div className='returnNav'>  

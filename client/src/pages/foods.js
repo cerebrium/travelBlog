@@ -46,7 +46,7 @@ const Foods = () => {
       </nav>
 
       {/* main content */}
-      <div className='mainDiv'>
+      <div className='mainDiv layer'>
         <h1>Foods</h1>
         <div className='foodContent'>
           <div className='imageStylerTwo aligner'>
