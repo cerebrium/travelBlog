@@ -83,24 +83,40 @@ const Asia = () => {
 
   return (
     <div>
+        <nav className="navBar">
+          <Link to="/account/" className='myLinks'>Home</Link>{' | '}
+          <Link to="/foods/" className='myLinks'>Foods</Link>{' | '}
+          <Link to="/places/" className='myLinks'>Places</Link>{' | '}
+          <a href="#logout" className='myLinks' onClick={e => {
+            e.preventDefault()
+            logout()
+            }}
+          >
+            Log Out
+          </a>
+        </nav>
       <div className='mainDiv'>
         <h1>Asia Trip</h1>
-        <h3 className='myTextClass'>In our asia trip, we vistited: Vietnam, Indonesia, and Malaysia. We spent time in 
-          Hanoi and Saigon when we were in Vietnam. We then went to Halong bay... which was amazing. After cruising through Halong bay 
-          we then went to Malaysia. Unfortunetly I was quite sick there and couldn't really handle life too much. But I recovered in 
-          time to head to the Komodo Islands. This was an amazing part of the trip. Absolutely shockingly pretty country, with large lizards 
-          that were friendlier than you would think!
-        </h3>
-        <Img fluid={data.secondFileName.childImageSharp.fluid} alt="../images/espressoAndDrink.jpg"/>
-        <h3>
-          I absolutely fell in love with the juices they served in Bali. This one here was one of the Best. The juices came 
-          from the freshest of ingredients and were always refreshing in the heat.
-        </h3>
-        <Img fluid={data.fileName.childImageSharp.fluid} alt="../images/sushi.jpg" />
-        <h3>
-          Along with the drinks the food was absolutely amazing. My favorite was the chicken satay, but at this restuarant the 
-          styling of these paticular sushi interested me.
-        </h3>
+        <div className='imageStylerTwo aligner'>
+          <h3 className='myTextClass'>In our asia trip, we vistited: Vietnam, Indonesia, and Malaysia. We spent time in 
+            Hanoi and Saigon when we were in Vietnam. We then went to Halong bay... which was amazing. After cruising through Halong bay 
+            we then went to Malaysia. Unfortunetly I was quite sick there and couldn't really handle life too much. But I recovered in 
+            time to head to the Komodo Islands. This was an amazing part of the trip. Absolutely shockingly pretty country, with large lizards 
+            that were friendlier than you would think!
+          </h3>
+            <Img fluid={data.secondFileName.childImageSharp.fluid} alt="../images/espressoAndDrink.jpg"/>
+          <h3>
+            I absolutely fell in love with the juices they served in Bali. This one here was one of the Best. The juices came 
+            from the freshest of ingredients and were always refreshing in the heat.
+          </h3>
+        </div>
+        <div className='imageStylerTwo aligner'>
+          <Img fluid={data.fileName.childImageSharp.fluid} alt="../images/sushi.jpg" />
+          <h3>
+            Along with the drinks the food was absolutely amazing. My favorite was the chicken satay, but at this restuarant the 
+            styling of these paticular sushi interested me.
+          </h3>
+        </div>
           <h2 className='commentTitle'>Comments</h2>
           <div className='commentsBox'>
             {mappedComments}
@@ -108,7 +124,7 @@ const Asia = () => {
           <br />
         <h3>Add A Comment:</h3>
           <form onSubmit={handleSubmit} className='myForm'>
-            <textarea name="message" cols="30" rows="10"></textarea><br />
+            <textarea name="message" cols="10" rows="10"></textarea><br />
             <input type="submit" value="submit" className='submitButton'/>
           </form>
           <div className='returnNav'>  

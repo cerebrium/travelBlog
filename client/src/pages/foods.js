@@ -1,7 +1,6 @@
 import React from "react"
 import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import axios from 'axios'
 import Img from 'gatsby-image'
 import '../components/layout.css'
 

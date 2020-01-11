@@ -60,6 +60,18 @@ const Leavenworth = () => {
   }
   return (
     <div>
+        <nav className="navBar">
+          <Link to="/account/" className='myLinks'>Home</Link>{' | '}
+          <Link to="/foods/" className='myLinks'>Foods</Link>{' | '}
+          <Link to="/places/" className='myLinks'>Places</Link>{' | '}
+          <a href="#logout" className='myLinks' onClick={e => {
+            e.preventDefault()
+            logout()
+            }}
+          >
+            Log Out
+          </a>
+        </nav>
       <div className='mainDiv'>
         <h1>Leavenworth Trip</h1>
         <h3 className='myTextClass'>Leavenworth is a rather special place for us. We usually go every year around Christmas. It is a little mock German village 
@@ -73,7 +85,7 @@ const Leavenworth = () => {
           <br />
         <h3>Add A Comment:</h3>
           <form onSubmit={handleSubmit} className='myForm'>
-            <textarea name="message" cols="30" rows="10"></textarea><br />
+            <textarea name="message" cols="10" rows="10"></textarea><br />
             <input type="submit" value="submit" className='submitButton'/>
           </form>
           <div className='returnNav'>  
