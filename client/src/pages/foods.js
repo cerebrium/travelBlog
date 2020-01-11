@@ -10,7 +10,7 @@ const Foods = () => {
   query {
     secondFileName: file(relativePath: { eq: "malaysiaBeer.png" }) {
       childImageSharp {
-        fluid(maxWidth: 500, maxHeight: 300) {
+        fluid(maxWidth: 500, maxHeight: 500) {
           ...GatsbyImageSharpFluid
         }
       }
