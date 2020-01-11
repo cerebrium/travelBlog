@@ -59,8 +59,8 @@ const Foods = () => {
           </div>
           <div className='imageStylerFour aligner'>
             <h3>
-              After Malaysia we went to Indonesia. In Indonesia I went with my friends to Bali and drnak lots of
-              espresso aon the beach! The coffee in most of Asia I found to be extremely sweet, so I stuck mostly
+              After Malaysia we went to Indonesia. In Indonesia we went to Bali and drank lots of
+              espresso on the beach! The coffee in most of Asia we found to be extremely sweet, so we stuck mostly
               to the espresso.
             </h3>
             <Img fluid={data.fileName.childImageSharp.fluid} alt="../images/beachBeer.jpg" />

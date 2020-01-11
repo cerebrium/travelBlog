@@ -107,7 +107,7 @@ const Asia = () => {
             <Img fluid={data.secondFileName.childImageSharp.fluid} alt="../images/espressoAndDrink.jpg"/>
             <br />
           <h3>
-            I absolutely fell in love with the juices they served in Bali. This one here was one of the Best. The juices came 
+            we absolutely fell in love with the juices they served in Bali. This one here was one of the Best. The juices came 
             from the freshest of ingredients and were always refreshing in the heat.
           </h3>
         </div>
