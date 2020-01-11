@@ -102,13 +102,10 @@ const Leavenworth = () => {
           </div>
           <br />
         <h3>Add A Comment:</h3>
-          <form onSubmit={handleSubmit} className='myForm'>
-            <textarea name="message" cols="30" rows="5"></textarea><br />
-            <input type="submit" value="submit" className='submitButton'/>
-          </form>
-          <div className='returnNav'>  
-          <Link to='/places/' className='myLinks'><h3>Back to Places</h3></Link>
-        </div>
+        <form onSubmit={handleSubmit} className='myForm'>
+          <textarea name="message" cols="30" rows="5"></textarea><br />
+          <input type="submit" value="submit" className='submitButton'/>
+        </form>
       </div>
     </div>
   )

@@ -12,7 +12,7 @@ const Account = () => {
   query {
     fileName: file(relativePath: { eq: "selfie.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 500, maxHeight: 300) {
+        fluid(maxWidth: 500, maxHeight: 300, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -51,7 +51,7 @@ const Account = () => {
         </nav>
         <div className='mainDiv'>
           <h1>Welcome To My Blog!</h1><br />
-          <div className='imageStylerTwo aligner'>
+          <div className='imageStylerThree aligner'>
             <Img fluid={data.fileName.childImageSharp.fluid} alt="../images/selfie.jpg"/>
           </div>
         </div>
