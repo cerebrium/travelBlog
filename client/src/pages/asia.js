@@ -51,7 +51,7 @@ const Asia = () => {
 
   const user = getProfile()
 
-  if (!currUser) {
+  if (!currUser.email) {
     setCurrUser(user)
   }
 
@@ -60,8 +60,8 @@ const Asia = () => {
     axios.post('/api/comment/add', {
       message: event.target.message.value,
       name: 'asia',
-      email: user.email,
-      userName: user.given_name
+      email: currUser.email,
+      userName: currUser.given_name
     }).then(response => {
       if (comments.length > 1) {
         var myComments = [...comments]
