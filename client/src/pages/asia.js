@@ -51,7 +51,7 @@ const Asia = () => {
 
   const user = getProfile()
 
-  if (!currUser.email) {
+  if (!currUser) {
     setCurrUser(user)
   }
 
