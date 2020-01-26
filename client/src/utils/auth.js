@@ -5,9 +5,9 @@ var auth;
 // cool
 if (typeof window !== "undefined") {
     auth = new auth0.WebAuth({
-      domain: 'dev-27fetw2x.auth0.com',
-      clientID: 'TNv2VD9KHB2y4GVBuwrU1quybZKTcSOi',
-      redirectUri: 'http://localhost:8000/callback/',
+      domain: process.env.GATSBY_AUTH0_DOMAIN,
+      clientID: process.env.GATSBY_AUTH0_CLIENT_ID,
+      redirectUri: GATSBY_AUTH0_CALLBACK_URL,
       responseType: "token id_token",
       scope: "openid profile email",
     })} else {
