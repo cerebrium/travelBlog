@@ -24,6 +24,13 @@ const Asia = () => {
         }
       }
     }
+    ThirdFileName: file(relativePath: { eq: "espressoAndCookie.JPG"}) {
+      childImageSharp {
+        fluid(maxWidth: 1000, maxHeight: 1000, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
     `)
 
@@ -117,6 +124,14 @@ const Asia = () => {
           <h3>
             Along with the drinks the food was absolutely amazing. My favorite was the chicken satay, but at this restuarant the 
             styling of these paticular sushi interested me.
+          </h3>
+        </div>
+        <div className='imageStylerTwo aligner'>
+          <Img fluid={data.ThirdFileName.childImageSharp.fluid} alt="../images/sushi.jpg" />
+          <br />
+          <h3>
+            This was another espresso and cookie mix that I got at this restuarant in Bali that quickly becaome one of our favorites. We were
+            able to go here at any time and hang out on the beach laying down and get chicken satay and espresso all day.... i.e. heaven!
           </h3>
         </div>
           <h2 className='commentTitle'>Comments</h2>

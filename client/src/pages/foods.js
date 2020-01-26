@@ -21,6 +21,13 @@ const Foods = () => {
         }
       }
     }
+    ThirdFileName: file(relativePath: { eq: "chickenInHanoi.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 800, maxHeight: 500, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
     `)
   if (!isAuthenticated()) {
@@ -64,6 +71,13 @@ const Foods = () => {
               to the espresso.
             </h3>
             <Img fluid={data.fileName.childImageSharp.fluid} alt="../images/beachBeer.jpg" />
+          </div>
+          <div className='imageStylerFour aligner'>
+            <h3>
+              In Hanoi I got this chicken, which was amazing. The rice was the cool part though, it came in this block
+              shape and was the crispy rice. Super yummy, the the sauce on the chicken was a type of plumb sauce that was also delicious.
+            </h3>
+            <Img fluid={data.ThirdFileName.childImageSharp.fluid} objectFit="cover" alt="../images/beachBeer.jpg" />
           </div>
         </div>
       </div>

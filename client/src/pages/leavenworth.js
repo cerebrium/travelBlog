@@ -10,10 +10,19 @@ const Leavenworth = () => {
   //Graphql Images
   const data = useStaticQuery(graphql`
     query {
-      secondFileName: file(relativePath: { eq: "leavenworthPretty.JPG"}) {
+      secondFileName: file(relativePath: { eq: "leavenworthPrettyTwo.jpg"}) {
         childImageSharp {
           fluid(maxWidth: 500, maxHeight: 300, quality: 100) {
-            ...GatsbyImageSharpFluid
+            aspectRatio
+              ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      fileName: file(relativePath: { eq: "GinishkaPretzel.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 500, maxHeight: 500, quality: 100) {
+            aspectRatio
+              ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -95,6 +104,12 @@ const Leavenworth = () => {
           ones over the years. 
           </h3>
           <Img fluid={data.secondFileName.childImageSharp.fluid} alt="../images/ginishkaDragon.png"/> 
+        </div>
+        <div className='imageStylerTwo aligner'>
+          <h3 className='myTextClass'>Here is a picture of Gini eating one of those pretzels. They are truly the best things ever, and they come 
+          with this cheese sauce that melts in your mouth. It is a really good, if fattening, experience. 
+          </h3>
+          <Img fluid={data.fileName.childImageSharp.fluid} alt="../images/ginishkaDragon.png"/> 
         </div>
           <h2 className='commentTitle'>Comments</h2>
           <div className='commentsBox'>
