@@ -7,7 +7,7 @@ if (typeof window !== "undefined") {
     auth = new auth0.WebAuth({
       domain: process.env.GATSBY_AUTH0_DOMAIN,
       clientID: process.env.GATSBY_AUTH0_CLIENT_ID,
-      redirectUri: GATSBY_AUTH0_CALLBACK_URL,
+      redirectUri: process.env.GATSBY_AUTH0_CALLBACK_URL,
       responseType: "token id_token",
       scope: "openid profile email",
     })} else {
